@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" fill="none" role="img" aria-label="Lumina placeholder artwork">
+  <defs>
+    <linearGradient id="lum-base" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#101216"/>
+      <stop offset="100%" stop-color="#08090b"/>
+    </linearGradient>
+    <linearGradient id="lum-a" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="lum-b" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cbff4d" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#cbff4d" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="lum-c" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.13"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.01"/>
+    </linearGradient>
+    <filter id="lum-blur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#lum-base)"/>
+
+  <g filter="url(#lum-blur)">
+    <rect x="170" y="180" width="520" height="520" rx="180" fill="url(#lum-a)"/>
+    <rect x="520" y="250" width="440" height="440" rx="220" fill="url(#lum-b)"/>
+    <rect x="330" y="380" width="520" height="360" rx="150" fill="url(#lum-c)"/>
+  </g>
+
+  <g stroke="#ffffff" stroke-opacity="0.07" fill="none">
+    <rect x="170" y="180" width="520" height="520" rx="180"/>
+    <rect x="520" y="250" width="440" height="440" rx="220"/>
+    <rect x="330" y="380" width="520" height="360" rx="150"/>
+  </g>
+
+  <g fill="#ffffff" fill-opacity="0.85">
+    <circle cx="600" cy="700" r="3.5"/>
+    <circle cx="640" cy="700" r="3.5" fill-opacity="0.35"/>
+    <circle cx="680" cy="700" r="3.5" fill-opacity="0.35"/>
+  </g>
+
+  <g stroke="#cbff4d" stroke-opacity="0.6" stroke-linecap="round" stroke-width="2">
+    <path d="M170 760h120"/>
+  </g>
+
+  <g stroke="#ffffff" stroke-opacity="0.05">
+    <path d="M0 60h1200"/>
+    <path d="M0 840h1200"/>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(node --version)",
+      "Shell(npm:*)",
+      "powershell",
+      "Shell(npm.cmd:*)",
+      "Shell(npx.cmd:*)",
+      "Shell(agent-browser:*)",
+      "Shell(C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe:*)",
+      "Shell(node \"C:\\Users\\mdtor\\AppData\\Local\\Temp\\commandcode\\C--xampp-htdocs-juan\\d17c2064-6ee1-41de-aa93-236e92cedf73\\scratchpad\\shoot.mjs\" \"C:\\Users\\mdtor\\AppData\\Local\\Temp\\commandcode\\C--xampp-htdocs-juan\\d17c2064-6ee1-41de-aa93-236e92cedf73\\scratchpad\")",
+      "Shell(node \"C:\\Users\\mdtor\\AppData\\Local\\Temp\\commandcode\\C--xampp-htdocs-juan\\d17c2064-6ee1-41de-aa93-236e92cedf73\\scratchpad\\slices.mjs\" \"C:\\Users\\mdtor\\AppData\\Local\\Temp\\commandcode\\C--xampp-htdocs-juan\\d17c2064-6ee1-41de-aa93-236e92cedf73\\scratchpad\" 1440 900 1800 dslice)",
+      "Shell(node \"C:\\Users\\mdtor\\AppData\\Local\\Temp\\commandcode\\C--xampp-htdocs-juan\\d17c2064-6ee1-41de-aa93-236e92cedf73\\scratchpad\\check.mjs\")"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}

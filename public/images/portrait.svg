@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" fill="none" role="img" aria-label="Portrait placeholder artwork">
+  <defs>
+    <linearGradient id="pt-bg" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0%" stop-color="#1a1c21"/>
+      <stop offset="55%" stop-color="#101216"/>
+      <stop offset="100%" stop-color="#0a0b0d"/>
+    </linearGradient>
+    <radialGradient id="pt-glow" cx="50%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="#cbff4d" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#cbff4d" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#cbff4d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pt-figure" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a4e55" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#22252b" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="pt-vignette" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#08090a" stop-opacity="0"/>
+      <stop offset="70%" stop-color="#08090a" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#08090a" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#pt-bg)"/>
+  <rect width="800" height="1000" fill="url(#pt-glow)"/>
+
+  <g stroke="#ffffff" stroke-opacity="0.045">
+    <path d="M0 250h800"/>
+    <path d="M0 500h800"/>
+    <path d="M0 750h800"/>
+    <path d="M200 0v1000"/>
+    <path d="M400 0v1000"/>
+    <path d="M600 0v1000"/>
+  </g>
+
+  <g>
+    <circle cx="400" cy="392" r="132" fill="url(#pt-figure)"/>
+    <path d="M400 545c-136 0-246 92-263 214-3 22-4 45-4 68v173h534V827c0-23-1-46-4-68-17-122-127-214-263-214Z" fill="url(#pt-figure)"/>
+  </g>
+
+  <g fill="#cbff4d" fill-opacity="0.5">
+    <circle cx="400" cy="392" r="132" fill="none" stroke="#cbff4d" stroke-opacity="0.16"/>
+  </g>
+
+  <rect width="800" height="1000" fill="url(#pt-vignette)"/>
+
+  <g stroke="#ffffff" stroke-opacity="0.12">
+    <path d="M344 640v96"/>
+  </g>
+
+  <g fill="#ffffff" fill-opacity="0.35" font-family="monospace" font-size="20" letter-spacing="4">
+    <text x="400" y="880" text-anchor="middle">REPLACE WITH YOUR PHOTO</text>
+  </g>
+</svg>

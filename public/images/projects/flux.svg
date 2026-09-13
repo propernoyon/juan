@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" fill="none" role="img" aria-label="Flux placeholder artwork">
+  <defs>
+    <linearGradient id="flux-base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0b0d"/>
+      <stop offset="55%" stop-color="#131519"/>
+      <stop offset="100%" stop-color="#0a0b0d"/>
+    </linearGradient>
+    <linearGradient id="flux-band" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="65%" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="flux-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#cbff4d" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#cbff4d" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#cbff4d" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#flux-base)"/>
+
+  <g stroke="url(#flux-band)" stroke-width="1.25" fill="none">
+    <path d="M-60 250 C 260 140, 520 400, 800 250 S 1180 90, 1290 190"/>
+    <path d="M-60 300 C 260 190, 520 450, 800 300 S 1180 140, 1290 240"/>
+    <path d="M-60 350 C 260 240, 520 500, 800 350 S 1180 190, 1290 290"/>
+    <path d="M-60 400 C 260 290, 520 550, 800 400 S 1180 240, 1290 340"/>
+    <path d="M-60 450 C 260 340, 520 600, 800 450 S 1180 290, 1290 390"/>
+    <path d="M-60 500 C 260 390, 520 650, 800 500 S 1180 340, 1290 440"/>
+    <path d="M-60 550 C 260 440, 520 700, 800 550 S 1180 390, 1290 490"/>
+    <path d="M-60 600 C 260 490, 520 750, 800 600 S 1180 440, 1290 540"/>
+  </g>
+
+  <g stroke="url(#flux-accent)" stroke-width="1.75" fill="none">
+    <path d="M-60 425 C 260 315, 520 575, 800 425 S 1180 265, 1290 365"/>
+  </g>
+
+  <g fill="#ffffff" fill-opacity="0.28">
+    <circle cx="800" cy="425" r="3.5"/>
+    <circle cx="520" cy="375" r="2.5"/>
+    <circle cx="260" cy="365" r="2"/>
+  </g>
+
+  <g stroke="#ffffff" stroke-opacity="0.05">
+    <path d="M120 0v900"/>
+    <path d="M1080 0v900"/>
+  </g>
+
+  <g stroke="#ffffff" stroke-opacity="0.05">
+    <rect x="120" y="120" width="960" height="660" rx="0"/>
+  </g>
+</svg>

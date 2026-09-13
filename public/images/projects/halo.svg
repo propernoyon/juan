@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1680 720" width="1680" height="720" fill="none" role="img" aria-label="Halo placeholder artwork">
+  <defs>
+    <linearGradient id="halo-base" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b0c0e"/>
+      <stop offset="100%" stop-color="#131519"/>
+    </linearGradient>
+    <linearGradient id="halo-bar" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.34"/>
+    </linearGradient>
+    <pattern id="halo-grid" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0V56" stroke="#ffffff" stroke-opacity="0.03" fill="none"/>
+    </pattern>
+  </defs>
+
+  <rect width="1680" height="720" fill="url(#halo-base)"/>
+  <rect width="1680" height="720" fill="url(#halo-grid)"/>
+
+  <g>
+    <rect x="140" y="300" width="26" height="180" rx="13" fill="url(#halo-bar)"/>
+    <rect x="190" y="250" width="26" height="230" rx="13" fill="url(#halo-bar)"/>
+    <rect x="240" y="330" width="26" height="150" rx="13" fill="url(#halo-bar)"/>
+    <rect x="290" y="200" width="26" height="280" rx="13" fill="url(#halo-bar)"/>
+    <rect x="340" y="290" width="26" height="190" rx="13" fill="url(#halo-bar)"/>
+    <rect x="390" y="160" width="26" height="320" rx="13" fill="#cbff4d" fill-opacity="0.55"/>
+    <rect x="440" y="260" width="26" height="220" rx="13" fill="url(#halo-bar)"/>
+    <rect x="490" y="320" width="26" height="160" rx="13" fill="url(#halo-bar)"/>
+    <rect x="540" y="230" width="26" height="250" rx="13" fill="url(#halo-bar)"/>
+    <rect x="590" y="300" width="26" height="180" rx="13" fill="url(#halo-bar)"/>
+  </g>
+
+  <g stroke="#ffffff" stroke-opacity="0.10">
+    <rect x="760" y="180" width="360" height="120" rx="12"/>
+    <rect x="760" y="330" width="360" height="120" rx="12"/>
+    <rect x="1160" y="180" width="360" height="270" rx="12"/>
+  </g>
+
+  <g fill="#ffffff" fill-opacity="0.20">
+    <rect x="792" y="212" width="140" height="8" rx="4"/>
+    <rect x="792" y="238" width="220" height="8" rx="4"/>
+    <rect x="792" y="264" width="96" height="8" rx="4"/>
+    <rect x="792" y="362" width="180" height="8" rx="4"/>
+    <rect x="792" y="388" width="120" height="8" rx="4"/>
+  </g>
+
+  <g fill="#cbff4d" fill-opacity="0.55">
+    <rect x="1192" y="212" width="120" height="8" rx="4"/>
+  </g>
+  <g fill="#ffffff" fill-opacity="0.18">
+    <rect x="1192" y="238" width="240" height="8" rx="4"/>
+    <rect x="1192" y="264" width="200" height="8" rx="4"/>
+    <rect x="1192" y="290" width="260" height="8" rx="4"/>
+  </g>
+
+  <g stroke="#ffffff" stroke-opacity="0.10" fill="none">
+    <circle cx="1500" cy="520" r="70"/>
+    <circle cx="1500" cy="520" r="34" stroke="#cbff4d" stroke-opacity="0.5"/>
+  </g>
+</svg>

@@ -1,0 +1,336 @@
+@import "tailwindcss";
+
+/* `dark:` utilities follow the explicit theme attribute, not the OS. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* ------------------------------------------------------------------
+   DESIGN TOKENS
+   One accent. Everything else is monochrome. Restraint is the point.
+   The colour tokens are `inline` aliases of the runtime palette below,
+   so every utility — including opacity modifiers like `bg-void/70` —
+   resolves through a variable and swaps with the theme.
+------------------------------------------------------------------- */
+@theme inline {
+  --color-void: var(--void);
+  --color-void-soft: var(--void-soft);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-ink-dim: var(--ink-dim);
+  --color-ink-faint: var(--ink-faint);
+  --color-ink-bright: var(--ink-bright);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+}
+
+@theme {
+  --font-sans: "Inter Tight", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "Instrument Serif", ui-serif, Georgia, "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --animate-spin-slow: spin 34s linear infinite;
+  --animate-spin-slower: spin 60s linear infinite reverse;
+  --animate-float: float 7s var(--ease-soft) infinite;
+  --animate-marquee: marquee 44s linear infinite;
+  --animate-pulse-dot: pulse-dot 2.6s ease-in-out infinite;
+  --animate-aurora: aurora 22s ease-in-out infinite alternate;
+  --animate-scroll-dot: scroll-dot 2.2s var(--ease-soft) infinite;
+}
+
+/* ------------------------------------------------------------------
+   THEME
+   Declared outside Tailwind's layers so it outranks the generated
+   :root theme variables. Only values that cannot be derived from the
+   colour tokens live here.
+------------------------------------------------------------------- */
+:root {
+  color-scheme: dark;
+  --void: #08090a;
+  --void-soft: #0c0d0f;
+  --surface: #111214;
+  --ink: #f1f1ef;
+  --ink-dim: #9c9c99;
+  --ink-faint: #66666a;
+  --ink-bright: #ffffff;
+  --line: #1c1d20;
+  --line-strong: #2b2d31;
+  --accent: #cbff4d;
+  --vignette: rgba(0, 0, 0, 0.62);
+  --figure-fade: rgba(8, 9, 10, 0.55);
+  --pulse-ring: rgba(203, 255, 77, 0.5);
+  --node-glow: rgba(203, 255, 77, 0.4);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --void: #f5f5f2;
+  --void-soft: #ebebe6;
+  --surface: #ffffff;
+  --ink: #0c0d0f;
+  --ink-dim: #56575c;
+  --ink-faint: #74757b;
+  --ink-bright: #26272b;
+  --line: #e4e4de;
+  --line-strong: #d0d0c8;
+  --accent: #4c7200;
+  --vignette: rgba(12, 13, 15, 0.04);
+  --figure-fade: rgba(245, 245, 242, 0.6);
+  --pulse-ring: rgba(76, 114, 0, 0.45);
+  --node-glow: rgba(76, 114, 0, 0.28);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -12px, 0);
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 var(--pulse-ring);
+  }
+  50% {
+    opacity: 0.65;
+    box-shadow: 0 0 0 6px transparent;
+  }
+}
+
+@keyframes aurora {
+  0% {
+    transform: translate3d(-4%, -2%, 0) scale(1);
+    opacity: 0.55;
+  }
+  100% {
+    transform: translate3d(5%, 4%, 0) scale(1.12);
+    opacity: 0.85;
+  }
+}
+
+@keyframes scroll-dot {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+/* ------------------------------------------------------------------
+   BASE
+------------------------------------------------------------------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--void);
+    color: var(--ink);
+    transition: background-color 0.45s var(--ease-soft), color 0.45s var(--ease-soft);
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-synthesis-weight: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: clip;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 500;
+    letter-spacing: -0.035em;
+    line-height: 1.02;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  section[id] {
+    scroll-margin-top: 5.5rem;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--void);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  img {
+    -webkit-user-drag: none;
+    user-select: none;
+  }
+
+  @media (min-width: 1024px) {
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--void);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--line-strong);
+      border: 3px solid var(--void);
+      border-radius: 999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--ink-faint);
+    }
+  }
+
+  /* Significantly reduce motion when the visitor asks for it. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ------------------------------------------------------------------
+   PRIMITIVES
+------------------------------------------------------------------- */
+@layer components {
+  .shell {
+    width: 100%;
+    max-width: 1240px;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .shell {
+      padding-inline: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .shell {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  /* Small uppercase meta label */
+  .label {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  .label-accent {
+    color: var(--accent);
+  }
+
+  /* Hairline gradient separator */
+  .hairline {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--line-strong) 22%,
+      var(--line-strong) 78%,
+      transparent
+    );
+  }
+
+  .mask-x {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  }
+
+  .mask-y {
+    -webkit-mask-image: linear-gradient(180deg, transparent, #000 18%, #000 82%, transparent);
+    mask-image: linear-gradient(180deg, transparent, #000 18%, #000 82%, transparent);
+  }
+
+  /* Animated underline for inline links */
+  .link-line {
+    position: relative;
+  }
+  .link-line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 1px;
+    width: 100%;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 0.55s var(--ease-expo);
+  }
+  .link-line:hover::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+
+  /* Dotted technical grid used behind the hero */
+  .grid-plane {
+    background-image: linear-gradient(
+        to right,
+        color-mix(in oklab, var(--ink) 5%, transparent) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        color-mix(in oklab, var(--ink) 5%, transparent) 1px,
+        transparent 1px
+      );
+    background-size: 64px 64px;
+  }
+
+  .text-display {
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+    font-weight: 500;
+  }
+}
+
+@utility serif-accent {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
