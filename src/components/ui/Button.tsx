@@ -74,7 +74,8 @@ export function Button({
   const classes = cn(
     "group relative inline-flex select-none items-center justify-center overflow-hidden rounded-full",
     "font-medium tracking-[-0.01em] whitespace-nowrap",
-    "transition-[background-color,border-color,color,filter] duration-400 ease-expo",
+    "transition-[background-color,border-color,color,filter,scale] duration-400 ease-expo",
+    "active:scale-[0.97] active:duration-100",
     VARIANTS[variant],
     SIZES[size],
     className,

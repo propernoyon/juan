@@ -45,7 +45,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 alt={`${project.name} — ${project.summary}`}
                 loading="lazy"
                 decoding="async"
-                className="h-full w-full scale-[1.01] object-cover transition-transform duration-[1100ms] ease-expo group-hover:scale-[1.055]"
+                className="h-full w-full scale-[1.01] object-cover transition-[transform,filter] duration-[1100ms] ease-expo group-hover:scale-[1.055] group-hover:brightness-[1.04]"
               />
 
               <span
@@ -65,8 +65,11 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               <div className="absolute inset-x-0 bottom-0 z-10 flex items-end justify-between gap-4 p-4 sm:p-5">
                 <span className="flex translate-y-2 items-center gap-2.5 opacity-0 transition-all duration-500 ease-expo group-hover:translate-y-0 group-hover:opacity-100">
                   <span className="text-[13px] font-medium text-ink">View Case Study</span>
-                  <span className="grid size-8 place-items-center rounded-full bg-accent text-void">
-                    <ArrowUpRight className="size-4" strokeWidth={2} />
+                  <span className="grid size-8 place-items-center overflow-hidden rounded-full bg-accent text-void">
+                    <ArrowUpRight
+                      className="size-4 transition-transform duration-500 ease-expo group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                      strokeWidth={2}
+                    />
                   </span>
                 </span>
                 <span className="label absolute right-4 bottom-4 text-[10px] text-ink/40 transition-opacity duration-500 group-hover:opacity-0 sm:right-5 sm:bottom-5">

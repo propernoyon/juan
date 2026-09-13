@@ -4,6 +4,7 @@ import { site } from "../../data/site";
 import { EASE, VIEWPORT } from "../../lib/motion";
 import { Section } from "../layout/Section";
 import { Button } from "../ui/Button";
+import { Parallax } from "../ui/Parallax";
 import { WordRise } from "../ui/WordRise";
 
 export function Contact() {
@@ -31,7 +32,9 @@ export function Contact() {
         ) : null}
 
         <h2 className="mt-8 max-w-4xl text-[clamp(2.3rem,7vw,5rem)]">
-          <WordRise text={contact.heading} />
+          <Parallax amount={22} className="block">
+            <WordRise text={contact.heading} blur />
+          </Parallax>
         </h2>
 
         <p className="mt-6 max-w-2xl text-[clamp(1.15rem,3vw,1.9rem)] leading-[1.35] tracking-[-0.025em] text-ink-dim">
@@ -54,8 +57,8 @@ export function Contact() {
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 18 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 18, scale: 0.96 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={VIEWPORT}
           transition={{ duration: 0.85, ease: EASE, delay: 0.35 }}
           className="mt-10"

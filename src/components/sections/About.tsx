@@ -4,6 +4,7 @@ import { site } from "../../data/site";
 import { EASE, VIEWPORT } from "../../lib/motion";
 import { Section } from "../layout/Section";
 import { Counter } from "../ui/Counter";
+import { Parallax } from "../ui/Parallax";
 import { Reveal } from "../ui/Reveal";
 import { SectionHeading } from "../ui/SectionHeading";
 
@@ -30,35 +31,37 @@ export function About() {
     <Section id="about">
       <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-5">
-          <motion.div
-            initial="hidden"
-            whileInView="show"
-            viewport={VIEWPORT}
-            className="overflow-hidden rounded-[20px] border border-line bg-surface"
-          >
-            <motion.figure variants={figureVariants} className="relative overflow-hidden">
-              <motion.img
-                variants={imageVariants}
-                src={about.portrait.src}
-                alt={about.portrait.alt}
-                loading="lazy"
-                decoding="async"
-                className="aspect-[4/5] w-full object-cover"
-              />
-              <span
-                aria-hidden
-                className="pointer-events-none absolute inset-0"
-                style={{
-                  background: "linear-gradient(180deg, transparent 55%, var(--figure-fade) 100%)",
-                }}
-              />
-              {about.portraitCaption ? (
-                <figcaption className="label absolute bottom-4 left-5 text-[10px] text-ink/70">
-                  {about.portraitCaption}
-                </figcaption>
-              ) : null}
-            </motion.figure>
-          </motion.div>
+          <Parallax amount={34}>
+            <motion.div
+              initial="hidden"
+              whileInView="show"
+              viewport={VIEWPORT}
+              className="overflow-hidden rounded-[20px] border border-line bg-surface"
+            >
+              <motion.figure variants={figureVariants} className="relative overflow-hidden">
+                <motion.img
+                  variants={imageVariants}
+                  src={about.portrait.src}
+                  alt={about.portrait.alt}
+                  loading="lazy"
+                  decoding="async"
+                  className="aspect-[4/5] w-full object-cover"
+                />
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute inset-0"
+                  style={{
+                    background: "linear-gradient(180deg, transparent 55%, var(--figure-fade) 100%)",
+                  }}
+                />
+                {about.portraitCaption ? (
+                  <figcaption className="label absolute bottom-4 left-5 text-[10px] text-ink/70">
+                    {about.portraitCaption}
+                  </figcaption>
+                ) : null}
+              </motion.figure>
+            </motion.div>
+          </Parallax>
         </div>
 
         <div className="lg:col-span-7 lg:pt-2">

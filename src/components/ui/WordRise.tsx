@@ -14,6 +14,8 @@ type WordRiseProps = {
   stagger?: number;
   /** Starts on mount instead of on scroll. Use inside the first viewport. */
   immediate?: boolean;
+  /** Adds a subtle blur→sharp pass to each word. Use sparingly — it paints. */
+  blur?: boolean;
   className?: string;
 };
 
@@ -34,6 +36,7 @@ export function WordRise({
   delay = 0,
   stagger = 0.05,
   immediate = false,
+  blur = false,
   className,
 }: WordRiseProps) {
   const words = text.split(" ");
@@ -54,10 +57,11 @@ export function WordRise({
         const isAccent = !!accent && word.toLowerCase().replace(/[^a-z]/g, "") === accent;
 
         const wordVariants: Variants = {
-          hidden: { y: "115%", opacity: 0 },
+          hidden: { y: "115%", opacity: 0, filter: blur ? "blur(9px)" : "blur(0px)" },
           show: {
             y: "0%",
             opacity: 1,
+            filter: "blur(0px)",
             transition: { duration: 0.95, ease: EASE, delay: delay + index * stagger },
           },
         };

@@ -192,6 +192,12 @@
     user-select: none;
   }
 
+  /* Set only while the desktop custom cursor is active. */
+  .cursor-none,
+  .cursor-none * {
+    cursor: none !important;
+  }
+
   @media (min-width: 1024px) {
     ::-webkit-scrollbar {
       width: 10px;

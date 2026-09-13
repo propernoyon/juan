@@ -1,11 +1,21 @@
+import { motion } from "framer-motion";
+import { EASE } from "../../lib/motion";
+
 /**
  * Fixed atmosphere behind everything: a base wash, a masked technical grid
  * and two very slow drifting glows. Transform/opacity only, so it composites
  * on the GPU. The animation is disabled on small screens to keep mobile cheap.
+ * Fades in first so the page-load intro has a settled backdrop to reveal on.
  */
 export function Background() {
   return (
-    <div aria-hidden className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+    <motion.div
+      aria-hidden
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.1, ease: EASE }}
+      className="pointer-events-none fixed inset-0 z-0 overflow-hidden"
+    >
       <div className="absolute inset-0 bg-void" />
 
       <div
@@ -39,6 +49,6 @@ export function Background() {
             "radial-gradient(125% 90% at 50% 0%, transparent 38%, var(--vignette) 100%)",
         }}
       />
-    </div>
+    </motion.div>
   );
 }

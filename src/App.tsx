@@ -10,6 +10,7 @@ import { Services } from "./components/sections/Services";
 import { Skills } from "./components/sections/Skills";
 import { Background } from "./components/ui/Background";
 import { CursorGlow } from "./components/ui/CursorGlow";
+import { CustomCursor } from "./components/ui/CustomCursor";
 import { Grain } from "./components/ui/Grain";
 import { ScrollProgress } from "./components/ui/ScrollProgress";
 import { TechMarquee } from "./components/ui/TechMarquee";
@@ -19,6 +20,7 @@ export default function App() {
     <MotionConfig reducedMotion="user">
       <Background />
       <CursorGlow />
+      <CustomCursor />
       <ScrollProgress />
       <Navbar />
 

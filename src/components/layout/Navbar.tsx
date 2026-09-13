@@ -31,13 +31,18 @@ export function Navbar() {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50">
+      <motion.header
+        initial={{ y: -18, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: EASE, delay: 0.08 }}
+        className="fixed inset-x-0 top-0 z-50"
+      >
         <div
           className={cn(
-            "border-b transition-[background-color,border-color,backdrop-filter] duration-500 ease-expo",
+            "border-b transition-[background-color,border-color,box-shadow,backdrop-filter] duration-500 ease-expo",
             scrolled
-              ? "border-line bg-void/70 backdrop-blur-xl backdrop-saturate-150"
-              : "border-transparent bg-transparent",
+              ? "border-line bg-void/70 shadow-[0_20px_50px_-38px_rgba(0,0,0,0.6)] backdrop-blur-xl backdrop-saturate-150"
+              : "border-transparent bg-transparent shadow-none",
           )}
         >
           <div
@@ -64,7 +69,7 @@ export function Navbar() {
                     key={item.id}
                     href={`#${item.id}`}
                     aria-current={isActive ? "true" : undefined}
-                    className="relative isolate rounded-full px-4 py-2 text-[13px] transition-colors duration-300"
+                    className="group/nav relative isolate rounded-full px-4 py-2 text-[13px] transition-colors duration-300"
                   >
                     {isActive ? (
                       <motion.span
@@ -76,6 +81,13 @@ export function Navbar() {
                     <span className={cn(isActive ? "text-ink" : "text-ink-dim hover:text-ink")}>
                       {item.label}
                     </span>
+                    <span
+                      aria-hidden
+                      className={cn(
+                        "pointer-events-none absolute inset-x-3.5 bottom-1.5 h-px origin-left bg-ink/35 transition-transform duration-500 ease-expo",
+                        isActive ? "scale-x-0" : "scale-x-0 group-hover/nav:scale-x-100",
+                      )}
+                    />
                   </a>
                 );
               })}
@@ -103,7 +115,7 @@ export function Navbar() {
             </div>
           </div>
         </div>
-      </header>
+      </motion.header>
 
       <AnimatePresence>
         {open ? (

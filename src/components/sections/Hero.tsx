@@ -1,10 +1,16 @@
 import { motion, useScroll, useTransform } from "framer-motion";
+import type { Variants } from "framer-motion";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { site } from "../../data/site";
-import { EASE } from "../../lib/motion";
+import { EASE, staggerParent } from "../../lib/motion";
 import { Button } from "../ui/Button";
 import { WordRise } from "../ui/WordRise";
 import { HeroVisual } from "./HeroVisual";
+
+const ctaItem: Variants = {
+  hidden: { opacity: 0, y: 14 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } },
+};
 
 export function Hero() {
   const { scrollY } = useScroll();
@@ -22,7 +28,7 @@ export function Hero() {
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease: EASE, delay: 0.05 }}
+              transition={{ duration: 0.7, ease: EASE, delay: 0.12 }}
             >
               <span className="inline-flex items-center gap-2.5 rounded-full border border-line bg-ink/[0.03] py-1.5 pr-4 pl-3 backdrop-blur-md">
                 <span className="relative grid size-1.5 place-items-center">
@@ -40,7 +46,8 @@ export function Hero() {
               text={site.hero.greeting}
               accentWord={site.name}
               immediate
-              delay={0.14}
+              blur
+              delay={0.18}
               stagger={0.07}
               accentClassName="serif-accent text-accent"
             />
@@ -52,7 +59,7 @@ export function Hero() {
               accentWord={site.hero.statementAccent}
               accentClassName="serif-accent text-ink"
               immediate
-              delay={0.46}
+              delay={0.5}
               stagger={0.035}
             />
           </p>
@@ -60,24 +67,28 @@ export function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.85 }}
+            transition={{ duration: 0.8, ease: EASE, delay: 0.9 }}
             className="mt-7 max-w-lg text-[0.95rem] leading-relaxed text-ink-faint"
           >
             {site.hero.paragraph}
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.95 }}
+            variants={staggerParent(0.09, 0.98)}
+            initial="hidden"
+            animate="show"
             className="mt-10 flex flex-wrap items-center gap-3"
           >
-            <Button href="#experience" size="lg" magnetic icon={ArrowDown}>
-              {site.hero.primaryCta}
-            </Button>
-            <Button href="#contact" variant="outline" size="lg" magnetic icon={ArrowUpRight}>
-              {site.hero.secondaryCta}
-            </Button>
+            <motion.div variants={ctaItem}>
+              <Button href="#experience" size="lg" magnetic icon={ArrowDown}>
+                {site.hero.primaryCta}
+              </Button>
+            </motion.div>
+            <motion.div variants={ctaItem}>
+              <Button href="#contact" variant="outline" size="lg" magnetic icon={ArrowUpRight}>
+                {site.hero.secondaryCta}
+              </Button>
+            </motion.div>
           </motion.div>
         </motion.div>
 
