@@ -1,4 +1,4 @@
-import { Dribbble, Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 export type Social = {
@@ -21,34 +21,34 @@ export const site = {
   /** Single-letter monogram for the logo mark. */
   monogram: "J",
   /** Shown under the logo on desktop and used in the page title. */
-  title: "Creative Developer",
-  role: "Creative Developer",
+  title: "Marketing & Sales Officer",
+  role: "Marketing & Sales Officer",
   location: "Manila, Philippines",
-  email: "hello@juan.dev",
+  email: "hello@example.com",
 
   /** Availability pill in the hero. Set to null to hide it. */
-  availability: "Available for freelance work",
+  availability: "Open to New Opportunities",
 
   hero: {
     /** Split across two lines on desktop. */
     greeting: "Hi, I'm Juan.",
     /** The italic word in `statement` gets the serif treatment. */
-    statement: "I build digital experiences designed to be remembered.",
+    statement: "Turning marketing strategies into measurable growth.",
     /** Rendered in the serif italic accent face. */
-    statementAccent: "remembered",
+    statementAccent: "growth",
     paragraph:
-      "Creative developer focused on building modern, interactive and high-performance digital experiences — where considered design meets engineering that holds up in production.",
-    primaryCta: "View My Work",
-    secondaryCta: "Let's Talk",
+      "Marketing & Sales professional focused on building strong customer relationships, creating effective marketing strategies, generating opportunities, and driving sustainable business growth.",
+    primaryCta: "View My Experience",
+    secondaryCta: "Let's Connect",
   },
 
   about: {
-    heading: "A little about me.",
-    intro: "I turn complex ideas into simple, beautiful and interactive digital experiences.",
+    heading: "A results-driven marketing and sales professional.",
+    intro: "I turn customer conversations into measurable business growth.",
     body: [
-      "I'm a creative developer who enjoys turning complex ideas into simple, beautiful and interactive digital experiences. My work sits where design and engineering meet — close enough to the pixels to care about the details, deep enough in the code to make them real.",
-      "Most of what I build is for the web: product interfaces, marketing sites and design systems. I care about rhythm, hierarchy and how a thing feels the first time you touch it — then about making sure it stays fast and accessible for everyone.",
-      "When I'm not building, I'm usually taking long exposures of empty streets, or reading about type.",
+      "I'm a results-oriented Marketing & Sales professional with experience in developing marketing initiatives, engaging customers, supporting sales growth and building lasting business relationships. I enjoy understanding what customers actually need, identifying opportunities, and turning conversations into meaningful business results.",
+      "My day-to-day sits between the market and the customer — planning campaigns, generating and qualifying leads, preparing proposals, and keeping existing clients close. I work closely with internal teams so that marketing activity and sales targets move in the same direction.",
+      "What I care about most is consistency: clear communication, honest follow-through, and relationships that keep customers coming back.",
     ],
     /** Paragraphs that appear after the intro line. */
     portrait: {
@@ -56,39 +56,39 @@ export const site = {
       alt: "Portrait of Juan",
     },
     /** Small print under the portrait. Set to null to hide. */
-    portraitCaption: "Manila, PH — 2026",
+    portraitCaption: "Manila, PH",
   },
 
-  /** Editable counters. Keep them honest. */
+  /** Editable counters. These are placeholders — replace with real numbers. */
   stats: [
-    { value: 5, suffix: "+", label: "Years experience" },
-    { value: 30, suffix: "+", label: "Projects shipped" },
-    { value: 20, suffix: "+", label: "Happy clients" },
+    { value: 5, suffix: "+", label: "Years in marketing & sales" },
+    { value: 100, suffix: "+", label: "Client relationships" },
+    { value: 25, suffix: "+", label: "Campaigns supported" },
   ],
 
   contact: {
-    heading: "Have a project in mind?",
-    subheading: "Let's build something remarkable together.",
+    heading: "Let's create opportunities together.",
+    subheading:
+      "Interested in a marketing initiative, a sales opportunity, or a potential collaboration?",
     /** Rendered in the serif italic accent face. */
-    subheadingAccent: "remarkable",
-    body: "Tell me what you're working on. I usually reply within one business day.",
-    cta: "Start a Conversation",
+    subheadingAccent: "opportunity",
+    body: "Tell me what you have in mind — I usually reply within one business day.",
+    cta: "Let's Connect",
   },
 
-  footerNote: "Designed and built from scratch — no templates.",
+  footerNote: "Marketing and sales professional focused on growth, relationships and results.",
 
   socials: [
-    { label: "GitHub", href: "https://github.com/", icon: Github },
     { label: "LinkedIn", href: "https://www.linkedin.com/", icon: Linkedin },
-    { label: "X", href: "https://x.com/", icon: Twitter },
-    { label: "Dribbble", href: "https://dribbble.com/", icon: Dribbble },
-    { label: "Email", href: "mailto:hello@juan.dev", icon: Mail },
+    { label: "Instagram", href: "https://www.instagram.com/", icon: Instagram },
+    { label: "Facebook", href: "https://www.facebook.com/", icon: Facebook },
+    { label: "Email", href: "mailto:hello@example.com", icon: Mail },
   ] satisfies Social[],
 };
 
 export const navItems: NavItem[] = [
   { id: "home", label: "Home" },
-  { id: "work", label: "Work" },
+  { id: "work", label: "Campaigns" },
   { id: "about", label: "About" },
   { id: "skills", label: "Skills" },
   { id: "contact", label: "Contact" },
@@ -96,15 +96,14 @@ export const navItems: NavItem[] = [
 
 /** Monospace strip under the hero. */
 export const marqueeItems: string[] = [
-  "React",
-  "TypeScript",
-  "Next.js",
-  "Tailwind CSS",
-  "Framer Motion",
-  "Design Systems",
-  "Figma",
-  "Accessibility",
-  "Performance",
-  "REST APIs",
-  "Git",
+  "Marketing Strategy",
+  "Sales Growth",
+  "Lead Generation",
+  "Customer Relationships",
+  "Market Research",
+  "Campaign Management",
+  "Brand Promotion",
+  "Negotiation",
+  "Business Development",
+  "Reporting & Analytics",
 ];

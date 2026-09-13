@@ -13,9 +13,9 @@ export function Services() {
   return (
     <Section id="services">
       <SectionHeading
-        eyebrow="06 — Services"
-        title="How I can help."
-        description="Four ways most engagements start. Happy to shape something around what you actually need."
+        eyebrow="06 — Expertise"
+        title="Where I add value."
+        description="Six areas most engagements start with — happy to shape something around what you actually need."
       />
 
       <motion.div

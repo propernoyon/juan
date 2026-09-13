@@ -9,9 +9,9 @@ export function Projects() {
   return (
     <Section id="work">
       <SectionHeading
-        eyebrow="02 — Selected Work"
-        title="Selected Work"
-        description="A few things I've built — products, sites and systems, each one shipped."
+        eyebrow="02 — Campaigns"
+        title="Selected campaigns"
+        description="A few marketing and sales initiatives I've supported — from first outreach through follow-up, each measured against a goal."
       />
 
       <motion.div

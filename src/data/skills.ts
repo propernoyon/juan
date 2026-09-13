@@ -1,4 +1,4 @@
-import { Palette, Terminal, Wand2 } from "lucide-react";
+import { Megaphone, TrendingUp, Users } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 export type SkillGroup = {
@@ -15,24 +15,42 @@ export type SkillGroup = {
 ------------------------------------------------------------------- */
 export const skillGroups: SkillGroup[] = [
   {
-    id: "frontend",
-    title: "Frontend",
-    blurb: "The foundation — interfaces that stay fast as they grow.",
-    icon: Terminal,
-    skills: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS"],
+    id: "marketing",
+    title: "Marketing",
+    blurb: "Planning and running initiatives that reach the right customers.",
+    icon: Megaphone,
+    skills: [
+      "Marketing Strategy",
+      "Brand Promotion",
+      "Digital Marketing",
+      "Campaign Management",
+      "Market Research",
+    ],
   },
   {
-    id: "design",
-    title: "Design",
-    blurb: "Systems thinking, from first sketch to shipped spec.",
-    icon: Palette,
-    skills: ["UI/UX", "Figma", "Design Systems", "Prototyping"],
+    id: "sales",
+    title: "Sales",
+    blurb: "Building pipeline and turning interest into closed business.",
+    icon: TrendingUp,
+    skills: [
+      "Sales & Business Development",
+      "Lead Generation",
+      "Sales Planning",
+      "Negotiation",
+      "Proposals & Presentations",
+    ],
   },
   {
-    id: "other",
-    title: "Other",
-    blurb: "The unglamorous work that makes everything else hold up.",
-    icon: Wand2,
-    skills: ["Git", "REST APIs", "Performance Optimization"],
+    id: "clients",
+    title: "Client & Communication",
+    blurb: "The relationship work that keeps customers and teams aligned.",
+    icon: Users,
+    skills: [
+      "Customer Relationship Management",
+      "Client Management",
+      "Customer Retention",
+      "Communication",
+      "Reporting & Analytics",
+    ],
   },
 ];

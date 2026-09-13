@@ -13,9 +13,9 @@ export function Skills() {
   return (
     <Section id="skills">
       <SectionHeading
-        eyebrow="04 — Expertise"
-        title="What I work with."
-        description="The tools I reach for most — chosen for how they hold up once real users arrive."
+        eyebrow="04 — Skills"
+        title="Skills that drive results."
+        description="The capabilities I rely on most — built for how real customers and markets behave."
       />
 
       <motion.div

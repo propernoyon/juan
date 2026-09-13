@@ -72,7 +72,7 @@ export function Hero() {
             transition={{ duration: 0.8, ease: EASE, delay: 0.95 }}
             className="mt-10 flex flex-wrap items-center gap-3"
           >
-            <Button href="#work" size="lg" magnetic icon={ArrowDown}>
+            <Button href="#experience" size="lg" magnetic icon={ArrowDown}>
               {site.hero.primaryCta}
             </Button>
             <Button href="#contact" variant="outline" size="lg" magnetic icon={ArrowUpRight}>

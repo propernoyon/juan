@@ -64,7 +64,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
               <div className="absolute inset-x-0 bottom-0 z-10 flex items-end justify-between gap-4 p-4 sm:p-5">
                 <span className="flex translate-y-2 items-center gap-2.5 opacity-0 transition-all duration-500 ease-expo group-hover:translate-y-0 group-hover:opacity-100">
-                  <span className="text-[13px] font-medium text-ink">View Project</span>
+                  <span className="text-[13px] font-medium text-ink">View Case Study</span>
                   <span className="grid size-8 place-items-center rounded-full bg-accent text-void">
                     <ArrowUpRight className="size-4" strokeWidth={2} />
                   </span>

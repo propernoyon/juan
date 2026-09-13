@@ -1,5 +1,5 @@
 import { motion, useSpring } from "framer-motion";
-import { Code2, Gauge, Sparkles } from "lucide-react";
+import { Megaphone, TrendingUp, Users } from "lucide-react";
 import type { PointerEvent as ReactPointerEvent } from "react";
 import { useRef } from "react";
 import type { LucideIcon } from "lucide-react";
@@ -16,23 +16,23 @@ type Chip = {
 
 const CHIPS: Chip[] = [
   {
-    icon: Code2,
-    label: "TypeScript",
-    value: "strict mode",
+    icon: TrendingUp,
+    label: "Sales Growth",
+    value: "measurable results",
     className: "left-[2%] top-[12%]",
     delay: "0s",
   },
   {
-    icon: Sparkles,
-    label: "Framer Motion",
-    value: "native 60fps",
+    icon: Megaphone,
+    label: "Campaigns",
+    value: "brand & demand",
     className: "right-[0%] top-[42%]",
     delay: "-2.6s",
   },
   {
-    icon: Gauge,
-    label: "Performance",
-    value: "99 / 100",
+    icon: Users,
+    label: "Client Retention",
+    value: "long-term",
     className: "left-[6%] bottom-[14%]",
     delay: "-5.1s",
   },

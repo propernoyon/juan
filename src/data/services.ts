@@ -1,4 +1,4 @@
-import { Code2, Gauge, MousePointerClick, PenTool } from "lucide-react";
+import { BarChart3, Handshake, Megaphone, Target, TrendingUp, Users } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 export type Service = {
@@ -15,35 +15,51 @@ export type Service = {
 ------------------------------------------------------------------- */
 export const services: Service[] = [
   {
-    id: "web-development",
-    title: "Web Development",
+    id: "marketing-strategy",
+    title: "Marketing Strategy",
     description:
-      "Production frontends built to last — typed, tested and fast on the devices your visitors actually use.",
-    icon: Code2,
-    deliverables: ["React & Next.js", "Headless CMS", "Core Web Vitals"],
+      "Developing focused marketing initiatives aligned with customer needs, brand objectives and business growth.",
+    icon: Target,
+    deliverables: ["Positioning", "Campaign planning", "Budget priorities"],
   },
   {
-    id: "ui-ux-design",
-    title: "UI/UX Design",
+    id: "sales-business-development",
+    title: "Sales & Business Development",
     description:
-      "Interfaces with a clear point of view — strong hierarchy, honest copy and no decoration for decoration's sake.",
-    icon: PenTool,
-    deliverables: ["Figma files", "Design systems", "Prototypes"],
+      "Identifying new opportunities, nurturing prospects and building relationships that support sustainable sales growth.",
+    icon: TrendingUp,
+    deliverables: ["Prospecting", "Pipeline development", "Partnerships"],
   },
   {
-    id: "interactive",
-    title: "Interactive Experiences",
+    id: "lead-generation",
+    title: "Lead Generation",
     description:
-      "Motion and interaction that serve the story. Smooth, purposeful, and never in the way of the content.",
-    icon: MousePointerClick,
-    deliverables: ["Micro-interactions", "Scroll storytelling", "WebGL-lite"],
+      "Finding and qualifying potential customers through targeted outreach and effective marketing activities.",
+    icon: Users,
+    deliverables: ["Prospect research", "Targeted outreach", "Qualification"],
   },
   {
-    id: "performance",
-    title: "Performance & Optimization",
+    id: "customer-relationship-management",
+    title: "Customer Relationship Management",
     description:
-      "Audits and rebuilds that turn a slow site into one that feels instant — measured, not guessed.",
-    icon: Gauge,
-    deliverables: ["Lighthouse audits", "Bundle diet", "Accessibility pass"],
+      "Keeping customers close with consistent communication, dependable follow-through and service that earns repeat business.",
+    icon: Handshake,
+    deliverables: ["Client communication", "Account care", "Retention"],
+  },
+  {
+    id: "campaign-management",
+    title: "Campaign Management",
+    description:
+      "Coordinating campaigns end to end — planning, messaging, execution and follow-up across every touchpoint.",
+    icon: Megaphone,
+    deliverables: ["Campaign execution", "Promotional activities", "Performance review"],
+  },
+  {
+    id: "market-research",
+    title: "Market Research",
+    description:
+      "Turning customer feedback and market trends into clear, practical insight for the next decision.",
+    icon: BarChart3,
+    deliverables: ["Competitor review", "Customer feedback", "Market insights"],
   },
 ];

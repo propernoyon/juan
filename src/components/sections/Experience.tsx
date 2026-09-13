@@ -24,7 +24,7 @@ export function Experience() {
         <div className="lg:col-span-4">
           <SectionHeading eyebrow="05 — Experience" title="Where I've worked." />
           <p className="mt-6 max-w-xs text-[0.9rem] leading-relaxed text-ink-faint">
-            A short history of the teams and problems that shaped how I build.
+            A short history of the roles and responsibilities that shaped how I market and sell.
           </p>
         </div>
 

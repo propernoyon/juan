@@ -1,8 +1,11 @@
-# Juan — Creative Developer
+# Juan — Marketing & Sales Officer
 
 A single-page, motion-led portfolio site. The whole experience lives on one
 route and is driven by scroll, subtle animation and a restrained monochrome
 palette with one accent colour.
+
+All visible copy lives in `src/data/` (`site.ts`, `projects.ts`, `experience.ts`,
+`skills.ts`, `services.ts`).
 
 ## Stack
 

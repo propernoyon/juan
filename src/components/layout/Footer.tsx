@@ -96,7 +96,7 @@ export function Footer() {
           <p className="label text-[10px]">
             © {year} {site.name}. All rights reserved.
           </p>
-          <p className="label text-[10px]">React · Tailwind CSS · Framer Motion</p>
+          <p className="label text-[10px]">Marketing Strategy · Sales Growth · Client Relationships</p>
         </div>
       </div>
     </footer>
