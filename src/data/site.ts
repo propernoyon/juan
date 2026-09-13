@@ -1,5 +1,5 @@
-import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
 
 export type Social = {
   label: string;
@@ -23,7 +23,7 @@ export const site = {
   /** Shown under the logo on desktop and used in the page title. */
   title: "Marketing & Sales Officer",
   role: "Marketing & Sales Officer",
-  location: "Manila, Philippines",
+  location: "Lisbon, Portugal",
   email: "hello@example.com",
 
   /** Availability pill in the hero. Set to null to hide it. */
@@ -56,7 +56,7 @@ export const site = {
       alt: "Portrait of Juan",
     },
     /** Small print under the portrait. Set to null to hide. */
-    portraitCaption: "Manila, PH",
+    portraitCaption: "Lisbon, PT",
   },
 
   /** Editable counters. These are placeholders — replace with real numbers. */
@@ -76,7 +76,8 @@ export const site = {
     cta: "Let's Connect",
   },
 
-  footerNote: "Marketing and sales professional focused on growth, relationships and results.",
+  footerNote:
+    "Marketing and sales professional focused on growth, relationships and results.",
 
   socials: [
     { label: "LinkedIn", href: "https://www.linkedin.com/", icon: Linkedin },
