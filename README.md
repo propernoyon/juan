@@ -53,7 +53,8 @@ path in the matching data entry.
 
 ## Theming
 
-The site ships light and dark themes:
+The site ships light and dark themes, with **light as the default** for
+first-time visitors:
 
 - The active theme is stored on `<html data-theme="light|dark">`.
 - `src/components/ui/ThemeToggle.tsx` (in the Navbar) switches it, and the choice

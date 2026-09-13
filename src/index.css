@@ -43,28 +43,11 @@
 /* ------------------------------------------------------------------
    THEME
    Declared outside Tailwind's layers so it outranks the generated
-   :root theme variables. Only values that cannot be derived from the
+   :root theme variables. Light is the default; dark is opt-in via
+   [data-theme="dark"]. Only values that cannot be derived from the
    colour tokens live here.
 ------------------------------------------------------------------- */
 :root {
-  color-scheme: dark;
-  --void: #08090a;
-  --void-soft: #0c0d0f;
-  --surface: #111214;
-  --ink: #f1f1ef;
-  --ink-dim: #9c9c99;
-  --ink-faint: #66666a;
-  --ink-bright: #ffffff;
-  --line: #1c1d20;
-  --line-strong: #2b2d31;
-  --accent: #cbff4d;
-  --vignette: rgba(0, 0, 0, 0.62);
-  --figure-fade: rgba(8, 9, 10, 0.55);
-  --pulse-ring: rgba(203, 255, 77, 0.5);
-  --node-glow: rgba(203, 255, 77, 0.4);
-}
-
-:root[data-theme="light"] {
   color-scheme: light;
   --void: #f5f5f2;
   --void-soft: #ebebe6;
@@ -80,6 +63,24 @@
   --figure-fade: rgba(245, 245, 242, 0.6);
   --pulse-ring: rgba(76, 114, 0, 0.45);
   --node-glow: rgba(76, 114, 0, 0.28);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --void: #08090a;
+  --void-soft: #0c0d0f;
+  --surface: #111214;
+  --ink: #f1f1ef;
+  --ink-dim: #9c9c99;
+  --ink-faint: #66666a;
+  --ink-bright: #ffffff;
+  --line: #1c1d20;
+  --line-strong: #2b2d31;
+  --accent: #cbff4d;
+  --vignette: rgba(0, 0, 0, 0.62);
+  --figure-fade: rgba(8, 9, 10, 0.55);
+  --pulse-ring: rgba(203, 255, 77, 0.5);
+  --node-glow: rgba(203, 255, 77, 0.4);
 }
 
 @keyframes float {
